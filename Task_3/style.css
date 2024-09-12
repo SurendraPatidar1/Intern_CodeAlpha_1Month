@@ -1,0 +1,170 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1d1f27;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: 0.3s;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-links li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-links a {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar-links a:hover {
+    color: #00aaff;
+  }
+  
+  #main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 50px;
+    background: #f4f4f4;
+    transition: 0.3s;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('img3.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .hero span {
+    color: #00aaff;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 50px;
+  }
+  
+  /* Skills Section */
+  .skill-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    background: #00aaff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Projects Section */
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .project {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Certificates Section */
+  .certificate-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .certificate {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(50% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .certificate img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Section */
+  .contact p {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    background: #1d1f27;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
