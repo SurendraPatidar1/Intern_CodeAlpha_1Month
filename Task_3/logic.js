@@ -1,29 +1,24 @@
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+function submitForm(event) {
+    event.preventDefault();
+    const formData = new FormData(document.getElementById('contactForm'));
 
-    const form = event.target;
-    const formData = new FormData(form);
-    const formMessage = document.getElementById('form-message');
+    // Display a success message for now (replace this with backend logic)
+    console.log("Form Submitted", Object.fromEntries(formData.entries()));
 
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        formMessage.textContent = 'Thank you! Your message has been sent.';
-        formMessage.style.color = 'green';
-      } else {
-        formMessage.textContent = 'Oops! Something went wrong. Please try again.';
-        formMessage.style.color = 'red';
-      }
-    }).catch(error => {
-      formMessage.textContent = 'Oops! Something went wrong. Please try again.';
-      formMessage.style.color = 'red';
+    // Send form data to the developer (via a backend API, email, or database)
+    fetch('/api/contact', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Your message has been sent successfully!");
+        } else {
+            alert("There was an issue submitting your message.");
+        }
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
     });
-  });
-</script>
+}
