@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-card">
+    <img id="song-image" src="./songs/maxresdefault.jpg" alt="Album Cover">
+    <h2 id="song-title">Song Title</h2>
+    <p id="artist-name">Artist Name</p>
+    
+    <audio id="audio" src="./songs/Aam-Jahe-Munde-1.mp3"></audio>
+
+    <div class="controls">
+      <button id="prev" class="control-btn">Prev</button>
+      <button id="play" class="control-btn">Play</button>
+      <button id="next" class="control-btn">Next</button>
+    </div>
+
+    <div class="extra-controls">
+      <label for="speed">Speed: </label>
+      <select id="speed" class="control-btn">
+        <option value="1">1x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+      <button id="download" class="control-btn">Download</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

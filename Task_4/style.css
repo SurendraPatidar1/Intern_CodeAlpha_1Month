@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .player-card {
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .player-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .player-card img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .extra-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .control-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .control-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #speed {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    background-color: rgb(39, 187, 213);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    .player-card {
+      width: 90%;
+    }
+  }
