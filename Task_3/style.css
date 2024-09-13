@@ -1,170 +1,497 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .sidebar {
-    width: 250px;
-    height: 100vh;
-    background: #1d1f27;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    transition: 0.3s;
-  }
-  
-  .sidebar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 50px;
-  }
-  
-  .sidebar-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar-links li {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar-links a {
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 0;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar-links a:hover {
-    color: #00aaff;
-  }
-  
-  #main-content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-    padding: 50px;
-    background: #f4f4f4;
-    transition: 0.3s;
-  }
-  
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    background: url('img3.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background-color: #ecf0f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  position: fixed;
+}
+
+.logo {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-links li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.sidebar-links a {
+  color: white;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  background-color: #34495e;
+}
+
+/* Main Content */
+#main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(100% - 260px);
+}
+
+/* Boxed Sections */
+section {
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #2980b9;
+}
+
+.hero span {
+  color: #e74c3c;
+}
+
+.btn {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3498db;
+}
+
+/* About Me Section */
+.about {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-left, .about-right {
+  width: 48%;
+  padding: 20px;
+}
+
+.about-left h3, .about-right h3 {
+  font-size: 1.8em;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.about-left p, .about-right p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
     align-items: center;
+  }
+
+  .about-left, .about-right {
+    width: 100%;
     text-align: center;
-    color: #fff;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-  }
-  
-  .hero span {
-    color: #00aaff;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: #00aaff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  section {
-    padding: 50px;
-  }
-  
-  /* Skills Section */
-  .skill-box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .skill {
-    background: #00aaff;
-    color: #fff;
     padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
   }
-  
-  /* Projects Section */
+}
+
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.skill-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  background-color: #d35400;
+  transform: translateY(-5px);
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-github, .btn-demo {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-github {
+  background-color: #333;
+}
+
+.btn-github:hover {
+  background-color: #555;
+}
+
+.btn-demo {
+  background-color: #2980b9;
+}
+
+.btn-demo:hover {
+  background-color: #3498db;
+}
+
+/* Colors for Project Cards */
+.project-card:nth-child(1) {
+  background-color: #f39c12;
+}
+
+.project-card:nth-child(2) {
+  background-color: #27ae60;
+}
+
+.project-card:nth-child(3) {
+  background-color: #8e44ad;
+}
+
+.project-card:nth-child(4) {
+  background-color: #e74c3c;
+}
+
+.project-card:nth-child(5) {
+  background-color: #3498db;
+}
+
+.project-card:nth-child(6) {
+  background-color: #e67e22;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .project-list {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .project {
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    width: calc(50% - 40px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Certificates Section */
-  .certificate-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .certificate {
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    width: calc(50% - 40px);
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .certificate img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  /* Contact Section */
-  .contact p {
+
+  .project-card {
+    width: 100%;
     margin-bottom: 20px;
   }
-  
-  footer {
-    text-align: center;
-    background: #1d1f27;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+}
+
+
+/* Certificates Section */
+.certificates {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.certificates h2 {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Certificate List Grid Layout */
+.certificate-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  background-color: #fff; /* Default color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white; /* Text color for readability */
+  position: relative;
+  text-align: left;
+}
+
+/* Specific colors for each card */
+#cert1 {
+  background-color: #3498db; /* Blue */
+}
+
+#cert2 {
+  background-color: #e74c3c; /* Red */
+}
+
+#cert3 {
+  background-color: #2ecc71; /* Green */
+}
+
+#cert4 {
+  background-color: #f39c12; /* Orange */
+}
+
+#cert5 {
+  background-color: #9b59b6; /* Purple */
+}
+
+#cert6 {
+  background-color: #1abc9c; /* Teal */
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 1em;
+  color: white; /* Ensures text stands out against the card background */
+}
+
+/* Hover Effect */
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .certificate-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certificate-card {
     width: 100%;
   }
-  
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #3498db; /* Highlight color */
+  outline: none;
+}
+
+button.btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Message */
+.form-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    padding: 0 20px;
+  }
+
+  #contact-form {
+    padding: 15px;
+  }
+
+  button.btn {
+    width: 100%;
+  }
+}
+
