@@ -3,188 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surendra Patidar | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Home - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
 </head>
 <body>
-  <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <div class="logo">Surendra Patidar</div>
-    <ul class="sidebar-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="Surendra_Patidar_Resume.pdf" download>Resume</a></li>
-      <li><a href="https://github.com/SurendraPatidar1" target="_blank">GitHub</a></li>
-    </ul>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <h2>Atlas</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </aside>
+
+   <!-- Main Content -->
+   <main class="main-content">
+    <section id="home" class="hero">
+      <div class="intro-text">
+        <h1>Hello, my name is <span class="name">Surendra Patidar</span></h1>
+        <h2>I'm a <span class="typing-effect"></span></h2>
+        <a href="#about" class="btn">More About Me</a>
+      </div>
+      <div class="profile-image">
+        <img src="your-profile-image.jpg" alt="Profile Picture">
+      </div>
+    </section>
+  </main>
+</div>
+
+
+    <!-- Hamburger Menu -->
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 
-  <!-- Main Content -->
-  <div id="main-content">
-    <section class="hero" id="home">
-      <h1>Hello, I'm <span>Surendra Patidar</span></h1>
-      <p>Frontend Developer | Web Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="about-left">
-          <h3>Know Who I Am</h3>
-          <p>Passionate about frontend development, I create responsive and visually appealing web applications. I have strong knowledge in HTML, CSS, and JavaScript, along with frameworks like React.</p>
-        </div>
-        <div class="about-right">
-          <h3>Let Me Introduce Myself</h3>
-          <p>With a background in computer science and a love for design, I strive to bridge the gap between functionality and user experience. I always seek new challenges and opportunities to grow in this ever-evolving industry.</p>
-        </div>
-      </div>
-    </section>
-    
-
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skill-box">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">C++</div>
-        <div class="skill">Data-Structure</div>
-        <div class="skill">Git/GitHub</div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Project 1" class="project-image">
-          <h3>Project 1</h3>
-          <p>Description of project 1. Tools used: HTML, CSS, JavaScript</p>
-          <a href="https://github.com/SurendraPatidar1/project1" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project1demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <img src="project2.jpg" alt="Project 2" class="project-image">
-          <h3>Project 2</h3>
-          <p>Description of project 2. Tools used: React, Node.js</p>
-          <a href="https://github.com/SurendraPatidar1/project2" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project2demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <img src="project3.jpg" alt="Project 3" class="project-image">
-          <h3>Project 3</h3>
-          <p>Description of project 3. Tools used: HTML, CSS</p>
-          <a href="https://github.com/SurendraPatidar1/project3" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project3demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <img src="project4.jpg" alt="Project 4" class="project-image">
-          <h3>Project 4</h3>
-          <p>Description of project 4. Tools used: JavaScript, API</p>
-          <a href="https://github.com/SurendraPatidar1/project4" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project4demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <img src="project5.jpg" alt="Project 5" class="project-image">
-          <h3>Project 5</h3>
-          <p>Description of project 5. Tools used: React, Firebase</p>
-          <a href="https://github.com/SurendraPatidar1/project5" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project5demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <img src="project6.jpg" alt="Project 6" class="project-image">
-          <h3>Project 6</h3>
-          <p>Description of project 6. Tools used: Vue.js, Node.js</p>
-          <a href="https://github.com/SurendraPatidar1/project6" target="_blank" class="btn-github">GitHub</a>
-          <a href="https://project6demo.com" target="_blank" class="btn-demo">Live Demo</a>
-        </div>
-      </div>
-    </section>
-    
-    
-
-    <section id="certificates" class="certificates">
-      <h2>Certificates</h2>
-      <div class="certificate-list">
-        <div class="certificate-card" id="cert1">
-          <img src="certificate1.jpg" alt="Certificate 1" class="certificate-image">
-          <h3>Certificate 1</h3>
-          <p>Description of certificate 1 and its relevance.</p>
-        </div>
-        <div class="certificate-card" id="cert2">
-          <img src="certificate2.jpg" alt="Certificate 2" class="certificate-image">
-          <h3>Certificate 2</h3>
-          <p>Description of certificate 2 and its relevance.</p>
-        </div>
-        <div class="certificate-card" id="cert3">
-          <img src="certificate3.jpg" alt="Certificate 3" class="certificate-image">
-          <h3>Certificate 3</h3>
-          <p>Description of certificate 3 and its relevance.</p>
-        </div>
-        <div class="certificate-card" id="cert4">
-          <img src="certificate4.jpg" alt="Certificate 4" class="certificate-image">
-          <h3>Certificate 4</h3>
-          <p>Description of certificate 4 and its relevance.</p>
-        </div>
-        <div class="certificate-card" id="cert5">
-          <img src="certificate5.jpg" alt="Certificate 5" class="certificate-image">
-          <h3>Certificate 5</h3>
-          <p>Description of certificate 5 and its relevance.</p>
-        </div>
-        <div class="certificate-card" id="cert6">
-          <img src="certificate6.jpg" alt="Certificate 6" class="certificate-image">
-          <h3>Certificate 6</h3>
-          <p>Description of certificate 6 and its relevance.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact-form">
-        <h2>Send us a message</h2>
-        <form id="contactForm" onsubmit="submitForm(event)">
-            <label for="name">Name*</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="phone">Phone Number*</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
-
-            <label for="subject">Subject*</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter your Subject" required>
-
-            <label for="message">Message*</label>
-            <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
-
-            <!-- Google reCAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <!-- Contact Information Section -->
-    <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Email us at: <a href="mailto:support@codehelp.in">support@codehelp.in</a></p>
-
-        <div class="social-icons">
-            <a href="#"><img src="path-to-icons/youtube.png" alt="YouTube"></a>
-            <a href="#"><img src="path-to-icons/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="path-to-icons/telegram.png" alt="Telegram"></a>
-        </div>
-    </div>
-    </section>
-    
-  </div>
-
-  <script src="logic.js"></script>
+  <!-- Link to JS file -->
+  <script src="../js/script.js"></script>
 </body>
 </html>
